@@ -4,8 +4,20 @@
     android:layout_height="match_parent">
     <ImageView
         android:id="@+id/image_item"
+        android:layout_centerInParent="true"
         android:src="@mipmap/ic_launcher"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
-
+    <ImageView
+        android:id="@+id/image_uncheck"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ic_check_gray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <ImageView
+        android:id="@+id/image_check"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ic_check_orange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 </RelativeLayout>

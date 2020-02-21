@@ -1,4 +1,4 @@
-package kr.puze.weddingphotobook
+package kr.puze.weddingphotobook.Adapter
 
 import android.content.Context
 import android.os.Build
@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.item_grid.view.*
+import kr.puze.weddingphotobook.R
 
 class ThumbnailGridAdapter(private val items: ArrayList<String>) : BaseAdapter() {
 
@@ -33,8 +34,11 @@ class ThumbnailGridAdapter(private val items: ArrayList<String>) : BaseAdapter()
             view = inflater.inflate(R.layout.item_grid, parent, false)
         }
 
+        view!!.image_check.visibility = View.GONE
+        view.image_uncheck.visibility = View.GONE
+
         Log.d("LOGTAG, Fitting Grid", items[position] + position)
-        Glide.with(context).load(items[position]).into(view!!.image_item)
+        Glide.with(context).load(items[position]).into(view.image_item)
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             view.image_item.clipToOutline = true
         }
