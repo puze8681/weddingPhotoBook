@@ -1,18 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:layout_alignParentRight="true"
+        android:src="@drawable/flower1"
+        android:layout_width="300dp"
+        android:layout_height="400dp"/>
+    <ImageView
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/flower2"
+        android:layout_width="250dp"
+        android:layout_height="300dp"/>
+    <LinearLayout
+        android:weightSum="5"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_weight="1"
+            android:weightSum="5"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+            <TextView
+                android:textColor="#420000"
+                android:textSize="24sp"
+                android:gravity="center"
+                android:text="BOM\nViewer"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+            <LinearLayout
+                android:orientation="vertical"
+                android:weightSum="2"
+                android:layout_weight="4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:weightSum="4"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp">
+                    <TextView
+                        android:id="@+id/text_move_main"
+                        android:textSize="20sp"
+                        android:textColor="#000"
+                        android:gravity="center"
+                        android:text="선택이동"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"/>
+                    <TextView
+                        android:id="@+id/text_delete_main"
+                        android:textSize="20sp"
+                        android:textColor="#000"
+                        android:gravity="center"
+                        android:text="선택삭제"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"/>
+                    <TextView
+                        android:id="@+id/text_add_main"
+                        android:textSize="20sp"
+                        android:textColor="#000"
+                        android:gravity="center"
+                        android:text="책추가"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"/>
+                    <TextView
+                        android:id="@+id/text_edit_main"
+                        android:textSize="20sp"
+                        android:textColor="#000"
+                        android:gravity="center"
+                        android:text="편집"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp">
+                    <EditText
+                        android:id="@+id/edit_main"
+                        android:textColor="#fff"
+                        android:textColorHint="#fff"
+                        android:hint="검색어를 입력해주세요."
+                        android:gravity="center|left"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:background="@drawable/edit_gray"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <GridView
+            android:id="@+id/grid_main"
+            android:scrollbars="none"
+            android:columnWidth="96dp"
+            android:numColumns="3"
+            android:layout_gravity="center"
+            android:stretchMode="columnWidth"
+            android:horizontalSpacing="12dp"
+            android:verticalSpacing="12dp"
+            android:layout_weight="4"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
+    </LinearLayout>
+</RelativeLayout>
