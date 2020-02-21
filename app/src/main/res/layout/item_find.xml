@@ -1,14 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
+    android:background="#d2d2d2"
     android:layout_width="match_parent"
     android:layout_height="49dp">
+    <View
+        android:id="@+id/view_left"
+        android:layout_marginLeft="8dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_width="24dp"
+        android:layout_height="48dp"/>
     <ImageView
         android:layout_marginLeft="8dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:id="@+id/image_folder"
         android:src="@drawable/ic_folder"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"/>
+    <ImageView
+        android:layout_marginLeft="8dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:id="@+id/image_unchecked"
+        android:src="@drawable/ic_uncheck_box"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"/>
+    <ImageView
+        android:layout_marginLeft="8dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:id="@+id/image_checked"
+        android:src="@drawable/ic_check_box"
         android:layout_width="wrap_content"
         android:layout_height="48dp"/>
     <TextView
@@ -18,9 +42,10 @@
         android:layout_alignParentTop="true"
         android:layout_marginLeft="8dp"
         android:text="/path"
-        android:layout_toRightOf="@id/image_folder"
+        android:layout_toRightOf="@id/view_left"
+        android:layout_toLeftOf="@id/image_enter"
         android:id="@+id/text_path"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="48dp"/>
     <ImageView
         android:id="@+id/image_enter"

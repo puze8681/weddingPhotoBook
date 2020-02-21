@@ -1,4 +1,4 @@
-package kr.puze.weddingphotobook
+package kr.puze.weddingphotobook.Utils
 
 import android.content.Context
 import android.content.SharedPreferences

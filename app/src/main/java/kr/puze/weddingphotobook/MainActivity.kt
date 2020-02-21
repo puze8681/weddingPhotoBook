@@ -1,11 +1,13 @@
 package kr.puze.weddingphotobook
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
 import kr.puze.weddingphotobook.Adapter.MainGridAdapter
+import kr.puze.weddingphotobook.Utils.PrefUtil
 
 class MainActivity : AppCompatActivity() {
 
@@ -41,7 +43,7 @@ class MainActivity : AppCompatActivity() {
             isOnEdit = !isOnEdit
         }
         text_add_main.setOnClickListener {
-
+            startActivity(Intent(this@MainActivity, FindActivity::class.java))
         }
     }
 
