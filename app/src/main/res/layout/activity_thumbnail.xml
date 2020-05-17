@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#fff"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ThumbnailActivity">
+    <RelativeLayout
+        android:background="#ee66aa"
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+        <TextView
+            android:id="@+id/text_back_thumbnail"
+            android:layout_marginLeft="16dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="돌아가기"
+            android:textSize="24sp"
+            android:textColor="#fff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+    <GridView
+        android:id="@+id/grid_thumbnail"
+        android:scrollbars="none"
+        android:columnWidth="96dp"
+        android:numColumns="5"
+        android:layout_gravity="center"
+        android:stretchMode="columnWidth"
+        android:horizontalSpacing="12dp"
+        android:verticalSpacing="12dp"
+        android:layout_weight="4"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+</LinearLayout>
